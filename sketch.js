@@ -20,17 +20,19 @@ let sketch = (p5) => {
     let state = 0;
     let turnCounter = 0;
     let totalSteps;
+    let width = window.innerWidth;
+    let height = window.innerHeight;
 
     p5.setup = () => {
-        p5.createCanvas(800,800);
-        x = p5.width / 2;
-        y = p5.height / 2;
+        p5.createCanvas(width,height);
+        x = width / 2;
+        y = height / 2;
         px = x;
         py = y;
         p5.background(255);
 
-        const cols = p5.width / stepSize;
-        const rows = p5.height / stepSize;
+        const cols = width / stepSize;
+        const rows = height / stepSize;
         totalSteps = cols * rows;
 
     }
